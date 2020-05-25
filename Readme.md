@@ -1,1 +1,12 @@
-# A workout logging app built using flutter
+# A phasic/program centric workout logging app built using flutter
+
+## Features
+
+- Creating programs
+- Logging workouts
+- Rating and commenting on workouts
+- Editing workouts
+- Deleting workouts
+- Exporting programs as CSV
+- Viewing of summary statistics
+- Comparing result of programs
