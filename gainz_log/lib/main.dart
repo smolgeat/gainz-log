@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 
 
+
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -26,6 +28,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes:{
         '/':(context) =>HomeScreen(),
+        '/ProgramMenu':(context) =>ProgramMenu(),
+        '/StatsMenu':(context) => StatsMenu(),
+        '/ExerciseMenu':(context)=>ExerciseMenu(),
+        '/Log':(context)=> LogMenu(),
         
       }
     );
@@ -47,6 +53,7 @@ class HomeScreen extends StatelessWidget{
         ListTile(
            onTap: () {
           // Go to programs menu
+          Navigator.pushNamed(context, '/ProgramMenu');
         },
           leading: Icon(Icons.assignment),
           title: Text('Programs'),
@@ -55,6 +62,7 @@ class HomeScreen extends StatelessWidget{
         ListTile(
            onTap: () {
           // go to Exercises menu
+          Navigator.pushNamed(context, '/ExerciseMenu');
         },
           leading: Icon(Icons.fitness_center),
           title:Text('Exercises'),
@@ -62,6 +70,7 @@ class HomeScreen extends StatelessWidget{
         ListTile( 
            onTap: () {
           // go to log menu
+          Navigator.pushNamed(context, '/Log');
         },
           leading: Icon(Icons.book),
           title: Text('Log')
@@ -70,6 +79,7 @@ class HomeScreen extends StatelessWidget{
         ListTile( 
           onTap: () {
           // Go to summary statistics menu
+          Navigator.pushNamed(context, '/StatsMenu');
         },
           leading: Icon(Icons.assessment),
           title:Text('Stats')
@@ -92,10 +102,76 @@ class HomeScreen extends StatelessWidget{
   } 
 }
 
-/* Programs Menu 
-*/
-/* Log
-*/
+
+
+class ProgramMenu extends StatelessWidget{
+  /* Programs Menu  
+     Create New program
+     Update Current program
+
+  */
+  @override 
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Program Menu'),
+        ),
+
+    );
+  }
+
+}
+class ExerciseMenu extends StatelessWidget{
+  /* Exercise 
+     Create New program
+     Update Current program
+     
+  */
+  @override 
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Exercises'),
+        ),
+
+    );
+  }
+
+}
+
+class LogMenu extends StatelessWidget{
+  /*
+    Workout log
+     
+  */
+  @override 
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Log'),
+        ),
+
+    );
+  }
+
+}
+class StatsMenu extends StatelessWidget{
 /*
     Stats 
 */
+  @override 
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Stats'),
+        ),
+
+    );
+  }
+
+}
+
