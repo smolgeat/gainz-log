@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/StatsMenu':(context) => StatsMenu(),
         '/ExerciseMenu':(context)=>ExerciseMenu(),
         '/Log':(context)=> LogMenu(),
+        '/Export':(context)=> ExportMenu(),
         
       }
     );
@@ -85,7 +86,15 @@ class HomeScreen extends StatelessWidget{
           title:Text('Stats')
           
         ),
-
+        ListTile( 
+          onTap: () {
+          // Go to summary statistics menu
+          Navigator.pushNamed(context, '/Export');
+        },
+          leading: Icon(Icons.share),
+          title:Text('Export')
+          
+        ),
       ],
 
     ),
@@ -168,6 +177,23 @@ class StatsMenu extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title:Text('Stats'),
+        ),
+
+    );
+  }
+
+}
+
+class ExportMenu extends StatelessWidget{
+/*
+    Stats 
+*/
+  @override 
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('Export'),
         ),
 
     );
