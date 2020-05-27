@@ -1,6 +1,6 @@
 # A phasic/program centric workout logging app built using flutter
 
-## Features
+## Feature Goals
 
 - Creating programs
 - Logging workouts
@@ -10,3 +10,5 @@
 - Exporting programs as CSV
 - Viewing of summary statistics
 - Comparing result of programs
+- Timer / Stopwatch available during workout
+- Log weight and waist size
