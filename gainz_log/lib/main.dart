@@ -134,7 +134,28 @@ class ProgramMenu extends StatelessWidget{
             },
             leading:Icon(Icons.edit),
             title:Text('Create Program')
-          )
+          ),
+          ListTile(
+            onTap:(){
+
+            } ,
+            leading:Icon(Icons.library_books),
+            title:Text('View Programs')
+            ),
+          ListTile(
+            onTap:(){
+
+            } ,
+            leading:Icon(Icons.build),
+            title:Text('Update Program')
+            ),
+          ListTile(
+            onTap:(){
+
+            },
+            leading:Icon(Icons.highlight_off),
+            title:Text('Delete Program'),
+          ),
         ],
         )
 
@@ -142,6 +163,8 @@ class ProgramMenu extends StatelessWidget{
   }
 
 }
+// Default Exercies
+List<String> exercises= ['Squat','Bench press','Deadlift','Overhead press','Bicep Curl','Flys','SLDL']; 
 class ExerciseMenu extends StatelessWidget{
   /* Exercise 
      Create New program
@@ -155,7 +178,22 @@ class ExerciseMenu extends StatelessWidget{
       appBar: AppBar(
         title:Text('Exercises'),
         ),
-
+      body:ListView.builder(
+        itemCount: exercises.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text('${exercises[index]}'),
+    );
+  },
+),
+    floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        label: Text('New Exercise'),
+        icon: Icon(Icons.edit),
+        backgroundColor: Colors.blueGrey,
+      ),
     );
   }
 
@@ -206,6 +244,7 @@ class ExportMenu extends StatelessWidget{
       appBar: AppBar(
         title:Text('Export'),
         ),
+      
 
     );
   }
